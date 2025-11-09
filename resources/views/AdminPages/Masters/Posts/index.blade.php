@@ -187,8 +187,6 @@ break;
       $('#modal-form [name=_method]').val('put');
       $('#modal-form [name=title]').focus();
 
-      $('#password, #password_confirmation').attr('required', false);
-
       $.get(url)
           .done((response) => {
               $('#modal-form [name=category_id]').val(response?.data?.category_id ?? '');
@@ -228,7 +226,7 @@ break;
                         '_method': 'delete'
                     })
                     .done((response) => {
-                        setSuccess(response?.message + '\n' +'Akun '+response.data.title +' terhapus.')
+                        setSuccess(response?.message + '\n' + response.data.title +' terhapus.')
                         table.ajax.reload();
                     })
                     .fail((errors) => {
