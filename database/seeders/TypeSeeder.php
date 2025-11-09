@@ -59,6 +59,11 @@ class TypeSeeder extends Seeder
                     'name' => 'Post Thumbnail',
                     'desc' => 'important',
                     'code' => DBTypes::FilePostThumbnail
+                ],
+                [
+                    'name' => 'Kover Berita',
+                    'desc' => 'important',
+                    'code' => DBTypes::FileKoverBerita
                 ]
             ]
         ],
@@ -74,6 +79,21 @@ class TypeSeeder extends Seeder
                 [
                     'name' => 'Action',
                     'code' => DBTypes::PostCategoriesAction
+                ]
+            ]
+        ],
+        [
+            'code' => DBTypes::KategoriBerita,
+            'name' => 'Kategori Berita',
+            'children' => [
+                [
+                    'name' => 'Pendidkan',
+                    'desc' => 'important',
+                    'code' => DBTypes::KategoriBeritaPendidkan
+                ],
+                [
+                    'name' => 'Teknologi',
+                    'code' => DBTypes::KategoriBeritaTeknologi
                 ]
             ]
         ],

@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\Settings\{
     TypeController
 };
 use App\Http\Controllers\Admin\Masters\{
+    NewsController,
     UserController,
     PostController
 };
@@ -39,6 +40,7 @@ Route::middleware('auth:web')->group(function () {
     Route::group(['prefix' => 'masters'], function () {
         Route::resource('users', UserController::class);
         Route::resource('posts', PostController::class);
+        Route::resource('news', NewsController::class);
     });
 
     Route::group(['prefix' => 'settings'], function () {

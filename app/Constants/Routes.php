@@ -22,6 +22,7 @@ class Routes
 
     const routeMasterUsers = 'users.index';
     const routeMasterPost = 'posts.index';
+    const routeMasterNews = 'news.index';
 
     const routeSettingPermission = 'permissions.index';
     const routeSettingHistory = 'histories.index';
